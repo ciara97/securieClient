@@ -3,7 +3,7 @@
 import serial
 import struct
 
-packed = struct.pack('IIIII', 1, 2, 3, 4, 5)
+packed = struct.pack('IIII', 1, 2, 3, 4)
 
 with serial.Serial('COM1', 19200, timeout=3) as ser:
     ser.write(packed)
